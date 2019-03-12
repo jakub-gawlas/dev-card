@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>Jakub Gawlas</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="neon "></div>
+      <div id="smoke">
+        <img src="smoke.png" />
+        <img src="smoke.png" />
+        <img src="smoke.png" />
+      </div>
+      <div class="logo">
+        <div class="claw-marks">
+          <img src="claw-marks.svg" />
+          <div class="space"></div>
+        </div>
+        <div class="text" id="title"></div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("title").textContent = window.location.hostname;
+    </script>
+  </body>
+</html>

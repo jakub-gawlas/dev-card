@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 4rem;
+  font-family: "Lobster", cursive;
+  text-shadow: 1px 1px 0.5rem #000;
+}
+
+.claw-marks {
+  position: absolute;
+  z-index: -1;
+}
+
+.claw-marks img {
+  height: 30rem;
+  opacity: 1;
+  transform: rotateZ(55deg);
+}
+
+.claw-marks img {
+  fill: #ffffff;
+}
+
+.claw-marks .space {
+  position: absolute;
+  width: 100vw;
+  height: 6rem;
+  top: 12.5rem;
+  background: black;
+  filter: blur(0.3em);
+}
+
+@keyframes neon {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50vw);
+  }
+}
+
+@keyframes colorful {
+  from {
+    background: rgb(19, 10, 148);
+  }
+  to {
+    background: rgb(148, 10, 10);
+  }
+}
+
+.neon {
+  position: absolute;
+  left: 4rem;
+  top: 0;
+  width: 15rem;
+  height: 100vh;
+  background: rgb(19, 10, 148);
+  filter: blur(20rem);
+  border-radius: 100%;
+  animation: neon 10s, colorful 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#smoke img {
+  position: absolute;
+  opacity: 1;
+}
+
+@keyframes smoke1 {
+  from {
+    transform: scale(3.5, 4) rotateZ(15deg);
+  }
+  to {
+    transform: scale(3.9, 4.5) rotateZ(360deg);
+  }
+}
+
+#smoke img:nth-child(1) {
+  bottom: 0;
+  left: 0;
+  animation: smoke1 50s linear infinite alternate;
+}
+
+@keyframes smoke2 {
+  from {
+    transform: scale(5, 4.5) rotateZ(2deg);
+  }
+  to {
+    transform: scale(4.6, 6) rotateZ(360deg);
+  }
+}
+
+#smoke img:nth-child(2) {
+  bottom: 0;
+  left: 300px;
+  animation: smoke2 55s linear infinite alternate;
+}
+
+@keyframes smoke3 {
+  from {
+    transform: scale(4, 5) rotateZ(60deg);
+  }
+  to {
+    transform: scale(5, 6) rotateZ(360deg);
+  }
+}
+
+#smoke img:nth-child(3) {
+  top: 0;
+  left: 500px;
+  animation: smoke3 60s linear infinite alternate;
+}

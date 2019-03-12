@@ -84,7 +84,7 @@ body {
   width: 15rem;
   height: 100vh;
   background: rgb(19, 10, 148);
-  filter: blur(20rem);
+  filter: blur(10rem);
   border-radius: 100%;
   animation: neon 10s, colorful 20s;
   animation-timing-function: linear;
